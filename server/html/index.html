@@ -18,7 +18,7 @@
     <div class="row">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="text-center">much candidates</h3>
+                <h3 class="text-center" id="suchHeader">much candidates</h3>
                 <div class="center-block" id="candidateChoice">
                     <table class="table candTable">
                         <tr>
@@ -59,10 +59,14 @@
 <script type="text/javascript" src="{{.StaticURL}}static/js/bootstrap.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
+        var muchRainbow = ["#FF0000", "#FF7F00", "#FFFF00", "#00FF00", "#0000FF", "#4B0082", "#8B00FF"];
         var suchGop = ["much constitution", "wow obamacare", "lol women's rights", "many candidate", "such liberty",
             "wow trickle down", "wow so same", "much running", "iowa wow", "unions wow", "much doge", "such ascii", "many pulse",
             "much reagan", "such bush", "wow liberal media", "wow founding fathers", "much democrat party", "not scientist",
             "such wall", "much trump", "wow"];
+
+        var headerWow = $("#suchHeader");
+        headerWow.css("color", muchRainbow[Math.floor(Math.random() * muchRainbow.length)]);
 
         var maxIndex = suchGop.length;
         var randomIndex = Math.floor(Math.random() * maxIndex);
