@@ -15,8 +15,9 @@ import (
 	"io"
 )
 
-// Global to hold the bucket name parsed from command-line args
+// Global to hold the bucket name and AWS configuration location parsed from command-line args
 var bucket string
+var conf string
 
 func walkpath(path string, f os.FileInfo, err error) error {
 	fi, err := os.Open(path)
@@ -57,7 +58,7 @@ func s3Upload(k *string, bucket *string, rd io.ReadSeeker, ct *string) error {
 	creds := credentials.NewChainCredentials(
 		[]credentials.Provider{
 			&credentials.SharedCredentialsProvider{
-				Filename: "/Users/cyarie/.aws/credentials",
+				Filename: conf,
 				Profile: "suchgop",
 			},
 		},
@@ -102,5 +103,6 @@ func main() {
 	flag.Parse()
 	root := flag.Arg(0)
 	bucket = flag.Arg(1)
+	conf = flag.Arg(2)
 	filepath.Walk(root, walkpath)
 }

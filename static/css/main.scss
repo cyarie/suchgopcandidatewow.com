@@ -1,35 +1,47 @@
 /** SCSS Variables **/
+$bg-color: black;
+$body-color: white;
+
 /** Main **/
+
 body {
-  background-color: black;
-  color: white;
+  background-color: $bg-color;
+  color: $body-color;
   font-size: 20px;
-  font-family: "Comic Sans MS", sans-serif; }
+  font-family:"Comic Sans MS", sans-serif;
+}
 
 table {
-  border-collapse: collapse; }
+  border-collapse: collapse;
+}
 
 img {
   width: 100%;
-  height: auto; }
+  height: auto;
+}
 
 .table {
   border-top: 2px #666 solid;
-  table-layout: fixed; }
+  table-layout: fixed;
+}
 
 .candTable {
-  border-top: 2px #000 solid; }
+  border-top: 2px #000 solid;
+}
 
 /** Candidate Picker **/
+
 .suchCandidate {
   border: 2px black solid;
   text-align: center;
-  width: 10%; }
+  width: 10%;
+}
 
 .suchCandidate:hover {
   -moz-box-shadow: 0 0 15px #b2009a;
   -webkit-box-shadow: 0 0 15px #b2009a;
-  box-shadow: 0 0 15px #b2009a; }
+  box-shadow: 0 0 15px #b2009a;
+}
 
 /** Animations **/
 .animateWow {
@@ -38,31 +50,37 @@ img {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
+  animation-fill-mode: both;
+}
 
 @-webkit-keyframes pulse {
   0% {
-    -webkit-transform: scale(1); }
+    -webkit-transform: scale(1);
+  }
   50% {
-    -webkit-transform: scale(1.1); }
+    -webkit-transform: scale(1.1);
+  }
   100% {
-    -webkit-transform: scale(1); } }
+    -webkit-transform: scale(1);
+  }
+}
+
 @keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(1.1); }
-  100% {
-    transform: scale(1); } }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
 .muchPulse {
   -webkit-animation-name: pulse;
-  animation-name: pulse; }
+  animation-name: pulse;
+}
 
 /** Social Stuff **/
 .fa-twitter:hover {
-  color: #00aced; }
+  color: #00aced;
+}
 
 .fa-facebook:hover {
-  color: #3b5998; }
-
-/*# sourceMappingURL=main.css.map */
+  color: #3b5998;
+}
