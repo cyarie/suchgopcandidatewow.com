@@ -3,6 +3,7 @@ package handlers
 import (
 	"log"
 	"net/http"
+	"html/template"
 )
 
 // Rolling up a custom handler to better deal with HTTP errors and the such. Also lets us pass through an environment
@@ -44,8 +45,14 @@ func (h WebHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) error {
 	var err error
+	type context struct {
+		StaticURL string
+	}
 
-	http.ServeFile(w, r, "./html/index.html")
+	ctx := &context{"https://s3.amazonaws.com/suchgop/"}
+
+	t, _ := template.ParseFiles("./html/index.html")
+	t.Execute(w, ctx)
 
 	return err
 }

@@ -74,7 +74,9 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 
-# Project-specific executable
+# Project-specific executable and creds
 server/server
+uploader/uploader
+suchgop_creds.csv
 
 
