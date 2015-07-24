@@ -74,9 +74,9 @@
 
         suchCandidate.mouseenter(function() {
             var muchRandom = Math.floor(Math.random() * maxIndex);
-            $(this).html("<img src=\"https://s3.amazonaws.com/suchgop/static/images/doge-600.png\">" + suchGop[muchRandom]);
+            $(this).html("<img src=\"https://s3.amazonaws.com/suchgop/static/images/doge-600.png\">" + suchGop[muchRandom]).css("color", muchRainbow[Math.floor(Math.random() * muchRainbow.length)]);
         }).mouseleave(function() {
-            $(this).html("<img src=\"https://s3.amazonaws.com/suchgop/static/images/doge-600.png\">" + $(this).data("candidate"));
+            $(this).html("<img src=\"https://s3.amazonaws.com/suchgop/static/images/doge-600.png\">" + $(this).data("candidate")).css("color", "white");
         });
 
         console.log("\n");
