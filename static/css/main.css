@@ -1,0 +1,95 @@
+/** SCSS Variables **/
+/** Main **/
+body {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-family: "Lato", Verdana, Arial, Helvetica, sans-serif; }
+
+table {
+  border-collapse: collapse; }
+
+img {
+  width: 100%;
+  height: auto;
+  z-index: 999;
+}
+
+.table {
+  border-top: 2px #666 solid;
+  table-layout: fixed; }
+
+.candTable {
+  border-top: 2px #000 solid; }
+
+.landingRow {
+  margin-bottom: 70%; }
+
+/** Candidate Picker **/
+.chooseCandTd {
+  border: 2px black solid;
+  text-align: center;
+  width: 20%; }
+
+.chooseCandTd:hover {
+  -moz-box-shadow: 0 0 15px #b21a2b;
+  -webkit-box-shadow: 0 0 15px #b21a2b;
+  box-shadow: 0 0 15px #b21a2b; }
+
+/** Bingo Card **/
+.bingoCell {
+  border: 2px #666 solid;
+  text-align: center;
+  height: 10rem;
+  width: 8rem; }
+
+.cardRow {
+  visibility: hidden;
+  margin-bottom: 5%; }
+
+.clicked {
+  background: #00aef3; }
+
+#freeCell {
+  background: #00aef3; }
+
+#bingoWin {
+  width: 25%; }
+
+#newCard {
+  width: 25%; }
+
+.offScreen {
+  position: absolute;
+  left: -5000px; }
+
+.winner {
+  background: black; }
+
+/** Transitions/Transformations **/
+.tilt {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.tilt:hover {
+  -webkit-transform: rotate(25deg);
+  -moz-transform: rotate(25deg);
+  -o-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  transform: rotate(25deg); }
+
+/** Signup Modal **/
+body.modal-open {
+  color: black; }
+
+/** Social Stuff **/
+.fa-twitter:hover {
+  color: #00aced; }
+
+.fa-facebook:hover {
+  color: #3b5998; }
+
+/*# sourceMappingURL=main.css.map */
