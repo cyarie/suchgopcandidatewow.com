@@ -1,17 +1,17 @@
 package main
 
 import (
-	"fmt"
-	"os"
 	"flag"
-	"path/filepath"
+	"fmt"
 	"mime"
+	"os"
+	"path/filepath"
 
 	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/service/s3"
-	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/aws/awsutil"
+	"github.com/aws/aws-sdk-go/aws/credentials"
+	"github.com/aws/aws-sdk-go/service/s3"
 	"io"
 )
 
@@ -59,20 +59,20 @@ func s3Upload(k *string, bucket *string, rd io.ReadSeeker, ct *string) error {
 		[]credentials.Provider{
 			&credentials.SharedCredentialsProvider{
 				Filename: conf,
-				Profile: "suchgop",
+				Profile:  "suchgop",
 			},
 		},
 	)
 
 	cl := s3.New(&aws.Config{
 		Credentials: creds,
-		Region: "us-east-1",
+		Region:      "us-east-1",
 	})
 
 	params := &s3.PutObjectInput{
-		Bucket: bucket,
-		Key: k,
-		Body: rd,
+		Bucket:      bucket,
+		Key:         k,
+		Body:        rd,
 		ContentType: ct,
 	}
 
